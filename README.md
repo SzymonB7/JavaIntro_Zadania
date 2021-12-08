@@ -1,1 +1,1 @@
-Pierwsza zmiana
+Druga zmiana
