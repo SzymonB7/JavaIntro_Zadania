@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
     @Test
-    void shouldAddTwoNumbers2And3(){
+    void shouldAdd2And3(){
         //given
         int a = 2;
         int b = 3;
