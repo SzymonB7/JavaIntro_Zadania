@@ -1,11 +1,10 @@
 package Main;
 
 public class EvenOrOddCheck {
-    public static String evenOrOddCheck(int a) {
-        if (a % 2 == 0){
-            return "Even number";
-        } else {
-            return "Odd number";
-        }
+    public static boolean isNumberEven(int a) {
+        return a % 2 == 0;
+    }
+    public static boolean isNumberOdd(int a) {
+        return a % 2 != 0;
     }
 }

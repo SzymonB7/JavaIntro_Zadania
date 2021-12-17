@@ -3,53 +3,78 @@ package Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class EvenOrOddCheckTest {
     @Test
-    void shouldCheckIf10IsEven() {
+    void shouldCheckIf4IsEven() {
         //given
-        int a = 10;
+        int a = 4;
         //when
-        String evenOrOdd = EvenOrOddCheck.evenOrOddCheck(10);
+        boolean isNumberEven = EvenOrOddCheck.isNumberEven(a);
         //then
-        Assertions.assertEquals("Even number", evenOrOdd);
+        Assertions.assertTrue(isNumberEven);
     }
     @Test
-    void shouldCheckIf7IsOdd(){
+    void shouldCheckIfNegative4IsEven() {
         //given
-        int a = 7;
+        int a = -4;
         //when
-        String evenOrOdd = EvenOrOddCheck.evenOrOddCheck(7);
+        boolean isNumberEven = EvenOrOddCheck.isNumberEven(a);
         //then
-        Assertions.assertEquals("Odd number", evenOrOdd);
+        Assertions.assertTrue(isNumberEven);
     }
     @Test
-    void shouldCheckIf0IsEven(){
+    void shouldCheckIf0IsEven() {
         //given
         int a = 0;
         //when
-        String evenOrOdd = EvenOrOddCheck.evenOrOddCheck(0);
+        boolean isNumberEven = EvenOrOddCheck.isNumberEven(a);
         //then
-        Assertions.assertEquals("Even number", evenOrOdd);
+        Assertions.assertTrue(isNumberEven);
     }
     @Test
-    void shouldCheckIfNegative5IsOdd(){
+    void shouldCheckIf9IsNotEven() {
         //given
-        int a = -5;
+        int a = 9;
         //when
-        String evenOrOdd = EvenOrOddCheck.evenOrOddCheck(-5);
+        boolean isNumberEven = EvenOrOddCheck.isNumberEven(a);
         //then
-        Assertions.assertEquals("Odd number", evenOrOdd);
+        Assertions.assertFalse(isNumberEven);
     }
     @Test
-    void shouldCheckIfNegative100IsEven(){
+    void shouldCheckIf9IsOdd() {
         //given
-        int a = -100;
+        int a = 9;
         //when
-        String evenOrOdd = EvenOrOddCheck.evenOrOddCheck(-100);
+        boolean isNumberOdd = EvenOrOddCheck.isNumberOdd(a);
         //then
-        Assertions.assertEquals("Even number", evenOrOdd);
+        Assertions.assertTrue(isNumberOdd);
+    }
+    @Test
+    void shouldCheckIfNegative9IsOdd() {
+        //given
+        int a = -111;
+        //when
+        boolean isNumberOdd = EvenOrOddCheck.isNumberOdd(a);
+        //then
+        Assertions.assertTrue(isNumberOdd);
+    }
+    @Test
+    void shouldCheckIf0IsNotOdd() {
+        //given
+        int a = 0;
+        //when
+        boolean isNumberOdd = EvenOrOddCheck.isNumberOdd(a);
+        //then
+        Assertions.assertFalse(isNumberOdd);
+    }
+    @Test
+    void shouldCheckIf1000IsNotOdd() {
+        //given
+        int a = 1000;
+        //when
+        boolean isNumberOdd = EvenOrOddCheck.isNumberOdd(a);
+        //then
+        Assertions.assertFalse(isNumberOdd);
     }
 
 }
