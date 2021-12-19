@@ -17,31 +17,15 @@ public class Movie {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDirectorName() {
         return directorName;
-    }
-
-    public void setDirectorName(String directorName) {
-        this.directorName = directorName;
     }
 
     public int getFeatureLength() {
         return featureLength;
     }
 
-    public void setFeatureLength(int featureLength) {
-        this.featureLength = featureLength;
-    }
-
     public int getYearOfProduction() {
         return yearOfProduction;
-    }
-
-    public void setYearOfProduction(int yearOfProduction) {
-        this.yearOfProduction = yearOfProduction;
     }
 }
