@@ -11,6 +11,10 @@ public class Calculator {
         return (long)a * (long)b;
     }
     public static double divide(int a, int b) {
-        return (double)a / (double)b;
+        if (a == 0 || b == 0){
+            return 0;
+        } else {
+            return (double) a / (double) b;
+        }
     }
 }
