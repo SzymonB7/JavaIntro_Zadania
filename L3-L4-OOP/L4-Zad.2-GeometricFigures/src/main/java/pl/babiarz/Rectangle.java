@@ -1,3 +1,5 @@
+package pl.babiarz;
+
 public class Rectangle extends Shape {
 
     private double a;
