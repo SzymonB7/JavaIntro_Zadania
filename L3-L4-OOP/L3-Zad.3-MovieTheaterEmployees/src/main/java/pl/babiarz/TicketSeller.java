@@ -3,8 +3,8 @@ package pl.babiarz;
 public class TicketSeller extends BaseEmployee{
 
 
-    public TicketSeller(String name, String lastName, int basicSalary, int yearOfEmployment) {
-        super(name, lastName, basicSalary, yearOfEmployment);
+    public TicketSeller(String name, String lastName, int yearOfEmployment) {
+        super(name, lastName, yearOfEmployment);
     }
 
     @Override
