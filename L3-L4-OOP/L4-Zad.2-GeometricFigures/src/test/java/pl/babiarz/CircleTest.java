@@ -10,21 +10,19 @@ class CircleTest {
     void shouldGetCircleArea(){
         //given
         Circle circle = new Circle(4);
-        circle.getArea();
         //when
-        double getArea = circle.getArea();
+        double area = circle.getArea();
         //then
-        Assertions.assertEquals(50.24, getArea);
+        Assertions.assertEquals(50.24, area);
     }
     @Test
     void shouldGetCircleAPerimeter(){
         //given
         Circle circle = new Circle(3);
-        circle.getPerimeter();
         //when
-        double getPerimeter = circle.getPerimeter();
+        double perimeter = circle.getPerimeter();
         //then
-        Assertions.assertEquals(18.84, getPerimeter);
+        Assertions.assertEquals(18.84, perimeter);
     }
 
 }

@@ -7,21 +7,19 @@ class RectangleTest {
     void shouldGetRectangleArea(){
         //given
         Rectangle rectangle = new Rectangle(2,4);
-        rectangle.getArea();
         //when
-        double getArea = rectangle.getArea();
+        double area = rectangle.getArea();
         //then
-        Assertions.assertEquals(8, getArea);
+        Assertions.assertEquals(8, area);
     }
     @Test
     void shouldGetRectanglePerimeter(){
         //given
         Rectangle rectangle = new Rectangle(5,7);
-        rectangle.getPerimeter();
         //when
-        double getPerimeter = rectangle.getPerimeter();
+        double perimeter = rectangle.getPerimeter();
         //then
-        Assertions.assertEquals(24, getPerimeter);
+        Assertions.assertEquals(24, perimeter);
     }
 
 }

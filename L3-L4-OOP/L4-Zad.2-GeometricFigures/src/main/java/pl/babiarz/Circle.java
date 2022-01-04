@@ -3,6 +3,7 @@ package pl.babiarz;
 public class Circle extends Shape {
 
     private double r;
+    private static final double pi = 3.14;
 
     public Circle(double r) {
         this.r = r;
@@ -10,11 +11,11 @@ public class Circle extends Shape {
 
     @Override
     public double getArea() {
-        return 3.14 * r * r;
+        return pi * r * r;
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * 3.14 * r;
+        return 2 * pi * r;
     }
 }

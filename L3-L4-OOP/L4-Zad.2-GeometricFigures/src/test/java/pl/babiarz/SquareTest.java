@@ -10,20 +10,18 @@ class SquareTest {
     void shouldGetSquareArea(){
         //given
         Square square = new Square(5);
-        square.getArea();
         //when
-        double getArea = square.getArea();
+        double area = square.getArea();
         //then
-        Assertions.assertEquals(25, getArea);
+        Assertions.assertEquals(25, area);
     }
     @Test
     void shouldGetSquarePerimeter(){
         //given
         Square square = new Square(7);
-        square.getPerimeter();
         //when
-        double getPerimeter = square.getPerimeter();
+        double perimeter = square.getPerimeter();
         //then
-        Assertions.assertEquals(28, getPerimeter);
+        Assertions.assertEquals(28, perimeter);
     }
 }

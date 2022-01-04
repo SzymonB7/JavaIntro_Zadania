@@ -10,21 +10,19 @@ class TriangleTest {
     void shouldGetTriangleArea(){
         //given
         Triangle triangle = new Triangle(4,5);
-        triangle.getArea();
         //when
-        double getArea = triangle.getArea();
+        double area = triangle.getArea();
         //then
-        Assertions.assertEquals(10, getArea);
+        Assertions.assertEquals(10, area);
     }
     @Test
     void shouldGetTrianglePerimeter(){
         //given
         Triangle triangle = new Triangle(4, 5, 3);
-        triangle.getPerimeter();
         //when
-        double getPerimeter = triangle.getPerimeter();
+        double perimeter = triangle.getPerimeter();
         //then
-        Assertions.assertEquals(12, getPerimeter);
+        Assertions.assertEquals(12, perimeter);
     }
 
 }
