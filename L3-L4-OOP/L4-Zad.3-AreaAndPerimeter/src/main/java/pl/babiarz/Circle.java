@@ -2,8 +2,7 @@ package pl.babiarz;
 
 public class Circle implements AreaAndPerimeter {
 
-    private double r;
-    private static final double pi = 3.14;
+    private final double r;
 
     public Circle(double r) {
         this.r = r;
@@ -11,11 +10,11 @@ public class Circle implements AreaAndPerimeter {
 
     @Override
     public double getArea() {
-        return pi * r *r;
+        return Math.PI * r *r;
     }
 
     @Override
     public double getPerimeter() {
-        return 2 * pi * r;
+        return 2 * Math.PI * r;
     }
 }

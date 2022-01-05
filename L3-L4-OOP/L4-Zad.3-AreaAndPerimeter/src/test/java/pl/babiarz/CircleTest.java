@@ -13,7 +13,7 @@ class CircleTest {
         //when
         double area = circle.getArea();
         //then
-        Assertions.assertEquals(314, area);
+        Assertions.assertEquals(314.1592653589793, area);
     }
     @Test
     void shouldGetCircleAPerimeter(){
@@ -22,7 +22,7 @@ class CircleTest {
         //when
         double perimeter = circle.getPerimeter();
         //then
-        Assertions.assertEquals(157, perimeter);
+        Assertions.assertEquals(157.07963267948966, perimeter);
     }
 
 }

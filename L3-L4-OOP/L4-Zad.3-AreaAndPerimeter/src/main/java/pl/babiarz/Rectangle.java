@@ -1,8 +1,8 @@
 package pl.babiarz;
 
 public class Rectangle implements AreaAndPerimeter{
-    private double a;
-    private double b;
+    private final double a;
+    private final double b;
 
     public Rectangle(double a, double b) {
         this.a = a;
