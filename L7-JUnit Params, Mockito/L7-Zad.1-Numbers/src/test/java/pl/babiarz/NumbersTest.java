@@ -1,11 +1,9 @@
 package pl.babiarz;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class NumbersTest {
     @ParameterizedTest
@@ -18,5 +16,10 @@ class NumbersTest {
     void shouldVerifyThatNumberIsNotEven(int number){
         Assertions.assertFalse(Numbers.isEven(number));
     }
-
+    @ParameterizedTest
+    @CsvSource(value = {"12:3", "245:11", "1549:19", "8322:15"}, delimiter = ':')
+    void shouldAddDigitsInNumber (int input, int expected){
+        int number = Numbers.addDigits(input);
+        Assertions.assertEquals(expected, number);
+    }
 }
