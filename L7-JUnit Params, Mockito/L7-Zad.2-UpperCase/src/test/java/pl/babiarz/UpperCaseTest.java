@@ -13,14 +13,14 @@ class UpperCaseTest {
     @ValueSource (strings = {"test", "TesT", "tEsT", "tESt"})
     void shouldConvertTextToUpperCase (String text){
         //given
-        //When
+        //when
         String upperCaseText = UpperCase.convertToUpperCase(text);
-        //Then
+        //then
         Assertions.assertEquals("TEST", upperCaseText);
     }
     @ParameterizedTest
     @NullAndEmptySource
     void shouldThrowInvalidArgumentException (String text){
-        assertThrows(InvelidArgumentException.class, () -> UpperCase.convertToUpperCase(text));
+        assertThrows(InvalidArgumentException.class, () -> UpperCase.convertToUpperCase(text));
     }
 }
