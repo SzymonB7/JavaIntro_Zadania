@@ -1,29 +1,18 @@
 import pl.babiarz.Currency;
 
-public class CurrencyCalculator implements RateGetter {
-    public CurrencyCalculator(double currencyBuyRate, double currencySellRate) {
-        this.currencyBuyRate = currencyBuyRate;
-        this.currencySellRate = currencySellRate;
+public class CurrencyCalculator {
+    private final RateGetter rateGetter;
+
+    public CurrencyCalculator(RateGetter rateGetter) {
+        this.rateGetter = rateGetter;
     }
 
-    double currencyBuyRate;
-    double currencySellRate;
-
-    @Override
-    public double getCurrentBuyRate(Currency currency) {
-        return currencyBuyRate;
+    public double calculateBuyValue(double pln, Currency currency){
+        if (pln > 0){
+        return pln / rateGetter.getCurrentBuyRate(currency);
+        } throw new IllegalArgumentException("Value can't be negative");
     }
-
-    @Override
-    public double getCurrentSellRate(Currency currency) {
-        return currencySellRate;
+    public double calculateSellValue (double amount, Currency currency) {
+        return amount * rateGetter.getCurrentSellRate(currency);
     }
-
-
-    public static double currencyConverter(double pln, Currency currency){
-        return pln.getCurrentBuyRate(currency);
-    }
-
-
-
 }
