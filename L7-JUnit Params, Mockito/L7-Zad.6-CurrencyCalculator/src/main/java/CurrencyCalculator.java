@@ -10,9 +10,11 @@ public class CurrencyCalculator {
     public double calculateBuyValue(double pln, Currency currency){
         if (pln > 0){
         return pln / rateGetter.getCurrentBuyRate(currency);
-        } throw new IllegalArgumentException("Value can't be negative");
+        } throw new IllegalArgumentException("Amount can't be negative");
     }
-    public double calculateSellValue (double amount, Currency currency) {
-        return amount * rateGetter.getCurrentSellRate(currency);
+    public double calculateSellValueInPln(double amount, Currency currency) {
+       if (amount > 0) {
+           return amount * rateGetter.getCurrentSellRate(currency);
+       } throw new IllegalArgumentException("Amount can't be negative");
     }
 }

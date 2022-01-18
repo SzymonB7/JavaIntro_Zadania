@@ -1,7 +1,8 @@
 package pl.babiarz;
 
 public enum Currency {
-    Eur,
+    EUR,
     USD,
     GBP
+
 }
