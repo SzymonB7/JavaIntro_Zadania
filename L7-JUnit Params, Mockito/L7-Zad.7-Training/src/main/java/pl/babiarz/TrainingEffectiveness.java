@@ -1,10 +1,15 @@
 package pl.babiarz;
 
 public class TrainingEffectiveness {
+    private final TrainingLength trainingLength;
+    private final CaloriesBurned caloriesBurned;
+    private final AveragePulseRate averagePulseRate;
 
-    TrainingLength trainingLength = new TrainingLength();
-    CaloriesBurned caloriesBurned = new CaloriesBurned();
-    AveragePulseRate averagePulseRate = new AveragePulseRate();
+    public TrainingEffectiveness(TrainingLength trainingLength, CaloriesBurned caloriesBurned, AveragePulseRate averagePulseRate) {
+        this.trainingLength = trainingLength;
+        this.caloriesBurned = caloriesBurned;
+        this.averagePulseRate = averagePulseRate;
+    }
 
     public double calculateTrainingEffectiveness(int min, int kcal, int bpm){
         if (min <= 0 || kcal <= 0 || bpm <=0) {
