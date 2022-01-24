@@ -1,5 +1,5 @@
 package pl.babiarz;
 
-public interface CaloriesBurned {
+public interface CaloriesBurnedEvaluation {
     double getCaloriesBurnedEvaluation(int kcal);
 }

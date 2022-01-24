@@ -1,5 +1,5 @@
 package pl.babiarz;
 
-public interface AveragePulseRate {
+public interface AveragePulseRateEvaluation {
     double getAveragePulseEvaluation(int bpm);
 }

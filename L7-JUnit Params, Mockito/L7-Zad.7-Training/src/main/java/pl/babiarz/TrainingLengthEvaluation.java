@@ -1,5 +1,5 @@
 package pl.babiarz;
 
-public interface TrainingLength {
+public interface TrainingLengthEvaluation {
     double getTrainingLengthEvaluation(int min);
 }
