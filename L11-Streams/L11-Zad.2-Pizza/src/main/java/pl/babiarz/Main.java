@@ -2,6 +2,7 @@ package pl.babiarz;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -36,24 +37,25 @@ public class Main {
                 .map(pizza -> pizza.getName())
                 .forEach(System.out::println);
 
-        menu
+        boolean isThereAnyVegeterianPizzaWithPaprykaAndPomidor = menu
                 .stream()
                 .filter(pizza -> pizza.isVegeterian())
                 .anyMatch(pizza -> pizza.getIngredients().contains("pomidor") && pizza.getIngredients().contains("papryka"));
 
-        menu
+
+        boolean isMozarellaOnAllPizza = menu
                 .stream()
                 .allMatch(pizza -> pizza.getIngredients().contains("mozarella"));
 
 
-        menu
+        Pizza pizzaWithMostCalories = menu
                 .stream()
-                .map (pizza -> pizza.getCalories())
-                .reduce((a, b) -> Integer.max(a, b));
+                .max(Comparator.comparing(Pizza::getCalories)).get();
 
-        menu
+
+        Pizza pizzaWithLeastCalories =menu
                 .stream()
-                .map (pizza -> pizza.getCalories())
-                .reduce((a, b) -> Integer.min(a, b));
+                .min(Comparator.comparing(Pizza::getCalories)).get();
+
     }
 }

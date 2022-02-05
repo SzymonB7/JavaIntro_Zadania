@@ -32,20 +32,4 @@ public class Pizza {
     public List<String> getIngredients() {
         return ingredients;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setVegeterian(boolean vegeterian) {
-        isVegeterian = vegeterian;
-    }
-
-    public void setCalories(int calories) {
-        this.calories = calories;
-    }
-
-    public void setIngredients(List<String> ingredients) {
-        this.ingredients = ingredients;
-    }
 }
