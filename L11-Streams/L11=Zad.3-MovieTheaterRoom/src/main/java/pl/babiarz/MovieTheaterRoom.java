@@ -2,9 +2,9 @@ package pl.babiarz;
 
 public class MovieTheaterRoom {
     private final String name;
-    private final String type;
+    private final Type type;
 
-    public MovieTheaterRoom(String name, String type) {
+    public MovieTheaterRoom(String name, Type type) {
         this.name = name;
         this.type = type;
     }
@@ -14,6 +14,6 @@ public class MovieTheaterRoom {
     }
 
     public String getType() {
-        return type;
+        return type.value;
     }
 }
