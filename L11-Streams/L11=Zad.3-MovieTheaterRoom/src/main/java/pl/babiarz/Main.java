@@ -3,6 +3,7 @@ package pl.babiarz;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,28 +20,33 @@ public class Main {
         MovieTheaterRoom room10 = new MovieTheaterRoom("Room 10", "4D");
 
         List<MovieTheaterRoom> rooms = new ArrayList<>(Arrays.asList(room1, room2, room3, room4, room5, room6, room7, room8, room9, room10));
-        long rooms2D = rooms
-            .stream()
-            .map(MovieTheaterRoom::getType)
-            .filter(room -> room.equals("2D"))
-            .count();
 
-        System.out.println(rooms2D);
-
-        long rooms3D = rooms
+        System.out.println(rooms
                 .stream()
-                .map(MovieTheaterRoom::getType)
-                .filter(room -> room.equals("3D"))
-                .count();
+                .collect(Collectors.groupingBy(MovieTheaterRoom::getType,Collectors.counting())));
 
-        System.out.println(rooms3D);
-
-        long rooms4D = rooms
-                .stream()
-                .map(MovieTheaterRoom::getType)
-                .filter(room -> room.equals("4D"))
-                .count();
-
-        System.out.println(rooms4D);
+//        long rooms2D = rooms
+//            .stream()
+//            .map(MovieTheaterRoom::getType)
+//            .filter(room -> "2D".equals(room))
+//            .count();
+//
+//        System.out.println(rooms2D);
+//
+//        long rooms3D = rooms
+//                .stream()
+//                .map(MovieTheaterRoom::getType)
+//                .filter(room -> "3D".equals(room))
+//                .count();
+//
+//        System.out.println(rooms3D);
+//
+//        long rooms4D = rooms
+//                .stream()
+//                .map(MovieTheaterRoom::getType)
+//                .filter(room -> "4D".equals(room))
+//                .count();
+//
+//        System.out.println(rooms4D);
     }
 }
