@@ -15,7 +15,5 @@ public class Main {
                 .flatMap(s -> s.mapToObj(n ->  (char)n))
                 .distinct()
                 .forEach(System.out::println);
-//                .forEach(String::toUpperCase)
-
     }
 }
